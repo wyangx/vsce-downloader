@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { ref, reactive } from 'vue'
-import { Icon } from '@iconify/vue'
 
 const inputText = ref('')
 const showResult = ref(false)
@@ -129,14 +128,10 @@ Unique Identifier    ms-vscode.vscode-typescript-next"
                     class="flex-1 px-3 py-2 text-sm border border-gray-300 rounded-md bg-gray-50 focus:outline-none"
                     @click="($event.target as HTMLInputElement).select()" />
                   <button
-                    class="px-4 py-2 rounded-md bg-green-500 hover:bg-green-600 active:scale-95 text-white transition"
-                    @click="copyToClipboard">
-                    <Icon icon="mdi:content-copy" />
-                  </button>
+                    class="px-4 py-2 rounded-md bg-green-500 hover:bg-green-600 active:scale-95 text-white font-semibold text-sm transition"
+                    @click="copyToClipboard">复制</button>
                   <a :href="result.downloadUrl" target="_blank" v-if="result.downloadUrl"
-                    class="px-4 py-2 rounded-md bg-sky-500 hover:bg-sky-600 active:scale-95 text-white transition flex items-center justify-center">
-                    <Icon icon="mdi:download" />
-                  </a>
+                    class="px-4 py-2 rounded-md bg-sky-500 hover:bg-sky-600 active:scale-95 text-white font-semibold text-sm transition">下载</a>
                 </div>
               </div>
 
